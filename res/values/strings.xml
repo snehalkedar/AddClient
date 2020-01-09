@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World!</string>
+    <string name="app_name">AddClient</string>
+   <string name="click">Click on the image to follow or escape to skip the add</string>
+    <style name="Myaddvertisment" parent="android:Theme">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

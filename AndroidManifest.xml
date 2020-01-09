@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="tv.techm"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="9" />
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+<uses-permission android:name="tv.techm.systemmanager.permission.RECEIVE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="tv.techm.content.data.permission.READ" />
+<uses-permission android:name="tv.techm.content.data.permission.WRITE" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+    <receiver android:name=".AddClientReceiver" android:enabled="true">
+      <intent-filter>
+	<action android:name="tv.techm.systemmanager.AUTHENTICATED" />
+      </intent-filter>
+    </receiver>
+
+    <service 
+	android:name=".AddClientService" >
+      <intent-filter>
+        <action android:name="tv.techm.AddClientService" />
+      </intent-filter>
+    </service>
+<activity android:name=".DisplayActivity"
+                  android:label="@string/app_name"
+                   android:theme="@style/Myaddvertisment">
+            
+        </activity>
+    </application>
+</manifest>
